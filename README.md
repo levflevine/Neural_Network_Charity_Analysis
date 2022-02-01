@@ -89,21 +89,25 @@ A number of steps were taken to increase the model performance as follows.
 
 ![INCOME_AMT](/Resources/INCOME_AMT.png)
 
-2. A new combined feature was introduced: a ratio of **INCOME_AMT** / **ASK_AMT** that reflected the potential risks of the donation. The individual **INCOME_AMT** and **ASK_AMT** features were dropped.
+2. Dropped the **STATUS** feature
+
+![drop](/Resources/drop.png)
+
+3. A new combined feature was introduced: a ratio of **INCOME_AMT** / **ASK_AMT** that reflected the potential risks of the donation. The individual **INCOME_AMT** and **ASK_AMT** features were dropped.
 
 ![new_feature](/Resources/new_feature.png)
 
-3. The number of **APPLICATION_TYPE** bins have been increased to **10** by reducing the **Other** bin cutoff to 70.
+4. The number of **APPLICATION_TYPE** bins have been increased to **10** by reducing the **Other** bin cutoff to 70.
 
 ![app_bins](/Resources/app_bins.png)
 
-4. The number of **CLASSIFICATION** bins have been increased to **12** by reducing the **Other** bin cutoff to 100.
+5. The number of **CLASSIFICATION** bins have been increased to **12** by reducing the **Other** bin cutoff to 100.
 
 ![clas_bins](/Resources/clas_bins.png)
 
-5. **Two mode hidden layers were added to the model** with **ReLu** and **Sigmoid activation functions**
+6. **Two mode hidden layers were added to the model** with **ReLu** and **Sigmoid activation functions**
 
-6. **Number of neurons have been inceased** for each hidden layer as follows.
+7. **Number of neurons have been inceased** for each hidden layer as follows.
 
 - **200** - first layer
 - **100** - second layer
@@ -112,13 +116,27 @@ A number of steps were taken to increase the model performance as follows.
 
 ![new_model](/Resources/new_model.png)
 
-7. **Number of epochs** have been increased to **100**
+8. **Number of epochs** have been increased to **100**
 
 ![epochs](/Resources/epochs.png)
 
+#### 3 Sample Model Improvement Attempts
+
+1. The model achieved an **64.2% accuracy**
+
+![att_1](/Resources/att_1.png)
+
+2. The model achieved an **67.0% accuracy**
+
+![att_2](/Resources/att_2.png)
+
+3. The model achieved an **72.3% accuracy**
+
+![att_3](/Resources/att_3.png)
+
 ## Summary
 
-Since the initial model did not reach the target accuracy, **the optimized model** was developed over the course of **7 iterations (attempts)** by optimizing the parameters described in the **Steps** section above. 
+Since the initial model did not reach the target accuracy, **the optimized model** was developed over the course of **multiple (20+) iterations (attempts)** by optimizing the parameters described in the **Steps** section above. 
 
 The optimized model has **improved the accuracy to 72.3%**. It still **has not achieved the target** 75.0% accuracy.
 
