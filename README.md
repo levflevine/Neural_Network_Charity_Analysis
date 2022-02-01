@@ -8,7 +8,7 @@ Create a neural network solution that can evaluate donation applications submitt
 
 ### Approach
 
-Apply machine learning and neural networks leveraging the Tensoflow library to the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.  
+Apply machine learning and neural networks leveraging the Tensorflow library to the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.  
 
 ### Deliverables: 
 
@@ -36,7 +36,7 @@ Apply machine learning and neural networks leveraging the Tensoflow library to t
 
 #### What variable(s) are considered the target(s) for the model?
 
-**IS_SUCCESSFUL** is the taget for the model - we are predictiong whether or not the donation application will be successful.
+**IS_SUCCESSFUL** is the taget for the model - we are predicting whether or not the donation application will be successful.
 
 ![Target_Variable](/Resources/target_variables.png)
 
@@ -85,7 +85,7 @@ The **target model performance was 75.0%**. Initially the model achieved an **62
 
 A number of steps were taken to increase the model performance as follows.
 
-1. The **INCOME_AMT** feature was converted from string ranges to numeric values based on the the middle of the range intervals
+1. The **INCOME_AMT** feature was converted from string ranges to numeric values equal to the middle of the range intervals
 
 ![INCOME_AMT](/Resources/INCOME_AMT.png)
 
@@ -93,11 +93,11 @@ A number of steps were taken to increase the model performance as follows.
 
 ![new_feature](/Resources/new_feature.png)
 
-3. The number of **APPLICATION_TYPE** bins have been increase to **10** by reducing the **Other** bin cutoff to 70.
+3. The number of **APPLICATION_TYPE** bins have been increased to **10** by reducing the **Other** bin cutoff to 70.
 
 ![app_bins](/Resources/app_bins.png)
 
-4. The number of **CLASSIFICATION** bins have been increase to **12** by reducing the **Other** bin cutoff to 100.
+4. The number of **CLASSIFICATION** bins have been increased to **12** by reducing the **Other** bin cutoff to 100.
 
 ![clas_bins](/Resources/clas_bins.png)
 
@@ -129,4 +129,4 @@ Further work is needed on the model. The following potential improvements could 
 1. Additional exploratory analysis of the dataset to better understand the significance of the features and how they could be transformed and/or dropped to better fit the model
 2. Other combinations of activation functions could be applied to the hidden layers and the output layer to improve the performance
 3. If an additional dataset could be obtained it could help improve the model training
-4. Comparign the performance of the NN model to the ML models, such as Random Forest.
+4. Comparign the performance of the NN model to the ML models, such as Random Forest. Since the data is in tabular format, the Random Forest could potentially produce better performance.
